@@ -13,6 +13,8 @@ import javax.servlet.http.Part;
 
 import com.user.DBConnect;
 
+import logUtill.ReserveLogger;
+
 @WebServlet("/add_Packages")
 @MultipartConfig
 public class PackageAddServlet extends HttpServlet {
@@ -33,6 +35,7 @@ public class PackageAddServlet extends HttpServlet {
 			String status = request.getParameter("status");
 			Part pimg = request.getPart("pimg");
 			String fileName = pimg.getSubmittedFileName();
+			ReserveLogger logger = ReserveLogger.getInstance();
 			
 			PackageDetails p = new PackageDetails(packageName,venue,packagePrice,onePersonFoodprice,foodDesc,decoPkgs,decoDesc,entertainment,photographer,status,fileName);
 			
@@ -47,14 +50,17 @@ public class PackageAddServlet extends HttpServlet {
 				pimg.write(path + File.separator + fileName);
 				
 				session.setAttribute("succMsg", "Package Added Sucessfully");
+				logger.logInfo("Package Added Sucessfully");
 				response.sendRedirect("packageView.jsp");
 			} else {
 				session.setAttribute("failedMsg", "Something wrong on server");
+				logger.logWarning("Something wrong on server");
 				response.sendRedirect("admin/allPackages.jsp");
 			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+
 		}
 	}
 

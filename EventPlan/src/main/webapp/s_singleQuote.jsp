@@ -78,7 +78,7 @@
     <div class="container">
         <div class="header">
         <h1>Exquisite Planners</h1>
-        <img src="s_images/s_logo.png" alt="s& s Suppliers Logo" width="100">
+        <img src="s_images/logo5.jpg" alt="s& s Suppliers Logo" width="100">
         
             <p>S & S Suppliers</p>
             <h2>Quotation ${quote.quoteId}</h2>

@@ -200,44 +200,55 @@ public class s_supplierDBModel {
 	}
 		
 	
-	public static boolean updateQuote(List<s_quote> s_quoteList, String qid, double totalPrice) {
-
+public static boolean updateQuote(List<s_quote> s_quoteList, String qid, double totalPrice) {
+		
 		try {
 			con = DBConnect.getConnection();
 			stmt = con.createStatement();
-
-			for (s_quote squote : s_quoteList) {
-				String sql = "update supplier_quotation set quantity= '" + squote.getQuantity() + "',unitPrice = '"
-						+ squote.getUnitPrice() + "',itemPrice =  '" + squote.getItemPrice() + "' where quoteId = '"
-						+ qid + "' and itemName = '" + squote.getItemName() + "'";
-
-		
-
-				int rs = stmt.executeUpdate(sql);
-				if (rs > 0) {
-					
-					isSuccess = true;
-				} else {
-					isSuccess = false;
-					break;
-				}
+			int rs = 0;
+			int rsTotal = 0;
+			for(s_quote squote : s_quoteList) {
+				
+				
+				String sql = " UPDATE supplier_quotation SET quantity = "+squote.getQuantity()+" , unitPrice = "+squote.getUnitPrice()+" , itemPrice = "+squote.getItemPrice()+" WHERE quoteId = '"+squote.getQuoteId()+"' AND itemName = '"+squote.getItemName()+"'";
+				System.out.println("SQL Statement: " + sql);
+				
+				rs = stmt.executeUpdate(sql);
+				
+				rsTotal += rs; 
+				
 			}
-
-			String sql1 = "update supplier_total set total = '" + totalPrice + "' where quoteId = '" + qid + "'";
-			int rs1 = stmt.executeUpdate(sql1);
-
-			// Check if the total price Updation fails and set isSuccess accordingly
-			if (rs1 <= 0) {
-				isSuccess = false;
+			
+			
+			if(rsTotal == s_quoteList.size()) { // Check if all statements were successful
+			    isSuccess = true;
+			} else {
+			    isSuccess = false;
 			}
+			
+			if(rsTotal > 1) {
+				isSuccess =true;
+			}else {
+				isSuccess =false;
+			}
+			
+			//String sql1 = "update supplier_total set total = "+totalPrice+" where quoteId = '"+qid+"'";
+			//int rs1 = stmt.executeUpdate(sql1);
+			//if(rs1 <0) {
+				//isSuccess = false;
+			//}else {
+				//isSuccess = true;
+			//}
 		}
-
-		catch (Exception e) {
+		
+		catch(Exception e){
 			e.printStackTrace();
 		}
-
 		return isSuccess;
-
+		
 	}
 	
+	
+
 }
+	

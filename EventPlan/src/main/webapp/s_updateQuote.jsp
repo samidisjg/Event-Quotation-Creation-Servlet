@@ -35,6 +35,7 @@
 			qobj1.setItemName(quote.getItemName());
 			qobj1.setQuantity(quote.getQuantity());
 			qobj1.setUnitPrice(quote.getUnitPrice());
+			qobj1.setQuoteId(quote.getQuoteId());
 		} else if (i == 2) {
 			qobj2.setItemName(quote.getItemName());
 			qobj2.setQuantity(quote.getQuantity());
@@ -55,11 +56,15 @@
 			<center>
 	<h2>Quotation Update</h2>
 	</center>
-
+	
+		<div class="col-1 mt-3">
+			Quote ID:<input type="text" name="qid" class="form-control mr-4"
+				placeholder="QuoteID" value="<%=qobj1.getQuoteId()%>" readonly>
+		</div>
 		<div class="form-row">
 			<div class="col-4 ml-5 mt-5">
 				<input type="text" name="Iname1" class="form-control mr-5"
-					placeholder="Item" value="<%=qobj1.getItemName()%> " readonly>
+					placeholder="Item" value="<%=qobj1.getItemName()%>" readonly>
 			</div>
 			<div class="col-2 mt-5">
 				<input type="text" name="qty1" class="form-control m1-5"
@@ -74,7 +79,7 @@
 		<div class="form-row">
 			<div class="col-4 ml-5 mt-5">
 				<input type="text" name="Iname2" class="form-control mr-5"
-					placeholder="Item" value="<%=qobj2.getItemName()%> " readonly>
+					placeholder="Item" value="<%=qobj2.getItemName()%>" readonly>
 			</div>
 			<div class="col-2 mt-5">
 				<input type="text" name="qty2" class="form-control m1-5"
@@ -90,7 +95,7 @@
 		<div class="form-row">
 			<div class="col-4 ml-5 mt-5">
 				<input type="text" name="Iname3" class="form-control mr-5"
-					placeholder="Item" value="<%=qobj3.getItemName()%> " readonly>
+					placeholder="Item" value="<%=qobj3.getItemName()%>" readonly>
 			</div>
 			<div class="col-2 mt-5">
 				<input type="text" name="qty3" class="form-control m1-5"

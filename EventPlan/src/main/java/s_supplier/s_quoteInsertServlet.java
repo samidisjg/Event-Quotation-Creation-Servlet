@@ -19,14 +19,7 @@ public class s_quoteInsertServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
-        if (request.getSession().getAttribute("formSubmitted") != null) {
-            // Redirect to a different page to prevent duplicate submission
-            response.sendRedirect("supplierHome.jsp");
-            return;
-        }
-
-
+	
 		
 		List<s_quote> s_quoteList = new ArrayList<>();
 		String quote_no = QuoteNumberGenerator.generateRandomQuoteNumber();
