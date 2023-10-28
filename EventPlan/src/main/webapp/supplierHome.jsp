@@ -14,7 +14,11 @@
 
 </head>
 <body>
-
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  		<a class="navbar-brand" href="index2.jsp">HOME </a><%=session.getAttribute("username")%>
+	</nav>
+  	
+	</nav>
 <nav class="navbar">
     <div class="container">
         <h1>Supplier Dashboard </h1>

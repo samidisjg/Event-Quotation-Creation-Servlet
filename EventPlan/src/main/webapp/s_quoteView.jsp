@@ -84,11 +84,11 @@
 						%>
 
 
-						<button onclick="callServlet('${quote.quoteId}')">Delete</button>
+						<button class="btn btn-sm btn-danger mb-2" onclick="callServlet('${quote.quoteId}')">Delete </button>
 
 						
 						<a href="s_updateQuote.jsp?qid=${quote.quoteId}"
-							class="btn btn-sm btn-primary mb-2"><i class="fas fa-edit"></i>Edit</a>
+							class="btn btn-sm btn-warning mb-2"><i class="fas fa-edit"></i>Edit</a>
 							
 							<a href="s_singleQuote.jsp?qid=${quote.quoteId}"
 							class="btn btn-sm btn-primary mb-2"><i class="fas fa-edit"></i>view More</a>
@@ -101,7 +101,6 @@
 									<th>Quantity</th>
 									<th>Unit Price</th>
 									<th>Item Price</th>
-									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>

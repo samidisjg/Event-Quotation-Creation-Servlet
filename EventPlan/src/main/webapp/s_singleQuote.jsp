@@ -56,6 +56,7 @@
     for (s_quote quote : s_quoteList) {
 
         if (i == 1) {
+        	qobj1.setQuoteId(quote.getQuoteId());
             qobj1.setItemName(quote.getItemName());
             qobj1.setQuantity(quote.getQuantity());
             qobj1.setUnitPrice(quote.getUnitPrice());
@@ -82,6 +83,8 @@
         
             <p>S & S Suppliers</p>
             <h2>Quotation ${quote.quoteId}</h2>
+            Quote ID: <%=qobj1.getQuoteId()%><br>
+            created by: S & S Suppliers Exquisite Events.
             <br><br><br>
         </div>
         <table class="table">
@@ -99,6 +102,7 @@
                     <td><%=qobj1.getQuantity()%></td>
                     <td><%=qobj1.getUnitPrice()%></td>
                     <td><%=qobj1.getItemPrice()%></td>
+                    
                 </tr>
                 <tr>
                     <td><%=qobj2.getItemName()%></td>

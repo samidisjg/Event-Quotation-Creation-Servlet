@@ -1,27 +1,33 @@
 package s_supplier;
 
-public class s_quote {
-	private String quoteId;
-	private String itemName;
-	private double quantity;
-	private double unitPrice;
-	private double itemPrice;
+public class s_quote { // creation of quotation parent class
+	protected String quoteId; // declaring the protected data members in the s_quote class
+	protected String itemName;
+	protected double quantity;
+	protected double unitPrice;
+	protected double itemPrice;
+	protected double total;
+
 	
-	public s_quote() {
-		
+
+	public s_quote() { // creation of s_quote default constructor
+
 	}
-	
-	public s_quote(String quoteId,String itemName, double quantity, double unitPrice, double itemPrice) {
+
+	public s_quote(String quoteId, String itemName, double quantity, double unitPrice, double itemPrice) { // values
+																											// assigning
+																											// from
+																											// overloaded
+																											// constructor
 		super();
 		this.quoteId = quoteId;
 		this.itemName = itemName;
 		this.quantity = quantity;
 		this.unitPrice = unitPrice;
 		this.itemPrice = itemPrice;
-
 	}
 
-	public String getQuoteId() {
+	public String getQuoteId() { // getters and setters creation for relevant data members
 		return quoteId;
 	}
 
@@ -61,9 +67,12 @@ public class s_quote {
 		this.itemPrice = itemPrice;
 	}
 	
+	public double getTotal() {
+		return total;
+	}
 
-	
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
 }
-
-
-

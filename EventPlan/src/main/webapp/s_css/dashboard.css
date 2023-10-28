@@ -1,9 +1,9 @@
 @charset "ISO-8859-1";
- /* Custom CSS for the dashboard */
     body {
         background-color: #f4f4f4;
         font-family: Arial, sans-serif;
     }
+
    .navbar {
         background-color:black; 
         color: #fff;

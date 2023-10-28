@@ -8,20 +8,19 @@
 <title>Order List View</title>
 </head>
 <body>
-	<table>
+	<table border = "1">
 	<c:forEach var= "order" items ="${oDetails}">
 	
 	
 	<tr>
 		<td>Supplier ID:</td>
-		<td>${order.supplierId}</td>
+		<td>${order.supplierID}</td>
 	</tr>
 	
 	<tr>
 		<td>Order ID:</td>
 		<td>${order.orderId}</td>
 	</tr>
-	
 	
 	<tr>
 		<td>Orders:</td>

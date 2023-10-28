@@ -21,10 +21,10 @@
       Item Name:<input type="text" name="Iname1"  class="form-control mr-5" placeholder="Item" required>
     </div>
     <div class="col-2 mt-5 ">
-      Quantity:<input type="text" name="qty1" class="form-control m1-5" placeholder="Quantity" required>
+      Quantity:<input type="number" name="qty1" class="form-control m1-5" placeholder="Quantity" required>
     </div>
     <div class="col-2 mt-5">
-      Unit Price: <input type="text" name="Uprice1" class="form-control mr-4" placeholder="Unit price" required>
+      Unit Price: <input type="number" name="Uprice1" class="form-control mr-4" placeholder="Unit price" required>
     </div>
   </div>
 	
@@ -33,10 +33,10 @@
      <input type="text" name="Iname2"  class="form-control mr-5" placeholder="Item" required>
     </div>
     <div class="col-2 mt-5">
-      <input type="text" name="qty2" class="form-control m1-5" placeholder="Quantity" required>
+      <input type="number" name="qty2" class="form-control m1-5" placeholder="Quantity" required>
     </div>
     <div class="col-2 mt-5">
-      <input type="text" name="Uprice2" class="form-control mr-4" placeholder="Unit price"required>
+      <input type="number" name="Uprice2" class="form-control mr-4" placeholder="Unit price"required>
     </div>
   </div>
 	
@@ -46,10 +46,10 @@
       <input type="text" name="Iname3"  class="form-control mr-5" placeholder="Item" required>
     </div>
     <div class="col-2 mt-5">
-      <input type="text" name="qty3" class="form-control m1-5" placeholder="Quantity" required>
+      <input type="number" name="qty3" class="form-control m1-5" placeholder="Quantity" required>
     </div>
     <div class="col-2 mt-5">
-       <input type="text" name="Uprice3" class="form-control mr-4" placeholder="Unit price" required>
+       <input type="number" name="Uprice3" class="form-control mr-4" placeholder="Unit price" required>
     </div>
   </div><br>
   <center>
